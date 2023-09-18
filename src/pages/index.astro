@@ -1,0 +1,58 @@
+---
+import "@fontsource-variable/roboto-mono";
+import "@fontsource-variable/inter";
+import AttractionButton from "../components/AttractionButton";
+import "@/src/styles/globals.css";
+---
+
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ascent Software</title>
+  </head>
+  <body
+    style={{
+      margin: 0,
+      height: "100%",
+      fontFamily: "Inter Variable",
+      backgroundImage:
+        "url('https://global-uploads.webflow.com/60e4613c6af8ff8ba41157b4/64d334175cab998e118f5105_radial-gradient-bg.svg')",
+      backgroundPosition: "center",
+    }}
+    class="text-white selection:bg-orange-600 bg-zinc-950"
+  >
+    <main
+      class="h-full flex justify-center items-center flex-col gap-8 lg:gap-24 overflow-hidden"
+    >
+      <h1
+        style={{ fontFamily: "Roboto Mono Variable" }}
+        class="text-3xl lg:text-6xl font-black"
+      >
+        Ascent Software
+      </h1>
+
+      <div
+        class="flex lg:flex-row flex-col w-full justify-center gap-12 items-center"
+      >
+        <div class="w-4/5 lg:w-[45ch] flex flex-col justify-center gap-8">
+          <p class="text-center text-xl text-zinc-400">
+            A <strong> Ascent</strong> organiza desenvolvedores freelancer para
+            que seu projeto seja entregue com qualidade e no prazo.
+          </p>
+          <AttractionButton isClient client:load />
+        </div>
+
+        <div class="w-4/5 lg:w-[45ch] flex flex-col gap-8">
+          <p class="text-center text-xl text-zinc-400">
+            Se voce é um desenvolvedor freelancer, a <strong> Ascent</strong> te
+            ajuda a encontrar projetos que se encaixam no seu perfil.
+          </p>
+          <AttractionButton isClient={false} client:load />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
