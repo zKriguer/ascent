@@ -18,7 +18,7 @@ const button = tv({
     },
     size: {
       sm: "text-xs p-2",
-      md: "text-base p-3 px-8",
+      md: "text-base md:p-3 md:px-8 p-2",
       lg: "p-6 text-lg",
     },
   },

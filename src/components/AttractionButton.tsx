@@ -6,7 +6,7 @@ type AttractionButtonProps = {
 };
 const AttractionButton = ({ isClient }: AttractionButtonProps) => {
   return (
-    <div className="flex gap-8 justify-center w-full items-center">
+    <div className="flex gap-8 justify-center w-full items-center col-span-1">
       {isClient ? (
         <div className="flex relative w-full justify-center">
           <CalModal>
@@ -33,7 +33,7 @@ const AttractionButton = ({ isClient }: AttractionButtonProps) => {
           </CalModal>
         </div>
       ) : (
-        <div className="flex w-full justify-center relative">
+        <div className="flex w-full justify-center relative col-span-1">
           <Button size="md" color="secondary" className="h-fit group flex">
             <p> Quero ser Ascent</p>
 
