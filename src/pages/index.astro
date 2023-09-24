@@ -8,7 +8,7 @@ import Layout from "@/src/pages/Layout.astro";
 
 <Layout>
   <main
-    class="h-full flex justify-center items-center flex-col gap-8 lg:gap-24 overflow-hidden"
+    class="h-full flex justify-center items-center flex-col gap-8 lg:gap-12 overflow-hidden"
   >
     <h1
       style={{ fontFamily: "Roboto Mono Variable" }}
@@ -20,20 +20,18 @@ import Layout from "@/src/pages/Layout.astro";
     <div
       class="flex lg:flex-row flex-col w-full justify-center gap-12 items-center"
     >
-      <div class="w-4/5 lg:w-[45ch] flex flex-col justify-center gap-8">
+      <div class="w-4/5 lg:w-[85ch] flex flex-col justify-center gap-8">
         <p class="text-center text-xl text-zinc-400">
           A <strong> Ascent</strong> organiza desenvolvedores freelancer para
-          que seu projeto seja entregue com qualidade e no prazo.
+          que seu projeto seja entregue com qualidade e no prazo. Se voce é um
+          desenvolvedor freelancer, a <strong> Ascent</strong> te ajuda a
+          encontrar projetos que se encaixam no seu perfil.
         </p>
-        <AttractionButton isClient client:load />
-      </div>
 
-      <div class="w-4/5 lg:w-[45ch] flex flex-col gap-8">
-        <p class="text-center text-xl text-zinc-400">
-          Se voce é um desenvolvedor freelancer, a <strong> Ascent</strong> te
-          ajuda a encontrar projetos que se encaixam no seu perfil.
-        </p>
-        <AttractionButton isClient={false} client:load />
+        <div class="flex">
+          <AttractionButton isClient client:load />
+          <AttractionButton isClient={false} client:load />
+        </div>
       </div>
     </div>
   </main>

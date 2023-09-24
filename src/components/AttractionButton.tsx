@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "./Button/Button";
 import CalModal from "./CalModal";
 
 type AttractionButtonProps = {
@@ -12,7 +12,7 @@ const AttractionButton = ({ isClient }: AttractionButtonProps) => {
           <CalModal>
             <Button
               size="md"
-              color="primary"
+              color="maionelga"
               className="h-fit group flex"
               onClick={async () => {
                 console.log("oi");
@@ -34,7 +34,7 @@ const AttractionButton = ({ isClient }: AttractionButtonProps) => {
         </div>
       ) : (
         <div className="flex w-full justify-center relative">
-          <Button size="md" color="primary" className="h-fit group flex">
+          <Button size="md" color="secondary" className="h-fit group flex">
             <p> Quero ser Ascent</p>
 
             <div className="absolute -top-full -right-1/4 transition-all duration-500 ease-in-out group-hover:right-1/2 transform translate-x-1/2 -translate-y-1/2 group-hover:visible group-hover:opacity-100 invisible opacity-0 hidden flex-col items-center justify-center w-full -z-10 lg:flex pointer-events-none">
