@@ -1,11 +1,13 @@
 ---
 import Nav from "../components/Nav";
+const { title } = Astro.props;
 ---
 
 <html lang="en" class="h-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
   </head>
   <body
     style={{
@@ -19,7 +21,7 @@ import Nav from "../components/Nav";
     }}
     class="text-white selection:bg-orange-600 bg-zinc-950"
   >
-    <Nav />
+    <Nav client:load />
     <slot />
   </body>
 </html>
