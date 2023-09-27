@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/src/components/ui/dialog/dialog";
+} from "@/src/components/ui/dialog.tsx";
 //@ts-expect-error
 import Cal from "@calcom/embed-react";
 

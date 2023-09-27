@@ -4,10 +4,11 @@ import "@fontsource-variable/inter";
 import AttractionButton from "../components/AttractionButton";
 import "@/src/styles/globals.css";
 import Layout from "@/src/layouts/Layout.astro";
+import PriceCard from "../components/PlansSection";
 ---
 
 <Layout>
-  <main
+  <section
     class="h-full flex justify-center items-center flex-col gap-8 lg:gap-12 overflow-hidden"
   >
     <h1
@@ -34,5 +35,21 @@ import Layout from "@/src/layouts/Layout.astro";
         </div>
       </div>
     </div>
-  </main>
+  </section>
+  <section
+    class="h-full flex justify-center items-center flex-col gap-8 lg:gap-12 overflow-hidden"
+  >
+    <h1
+      style={{ fontFamily: "Roboto Mono Variable" }}
+      class="text-3xl lg:text-6xl font-black w-full md:w-1/2 text-center"
+    >
+      Encontre o plano ideal para seu projeto
+    </h1>
+
+    <div
+      class="flex lg:flex-row flex-col w-full justify-center gap-12 items-center"
+    >
+      <PriceCard client:visible />
+    </div>
+  </section>
 </Layout>

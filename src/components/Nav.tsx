@@ -3,7 +3,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from "@/src/components/ui/avatar/avatar";
+} from "@/src/components/ui/avatar.tsx";
 
 type Props = {};
 

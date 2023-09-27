@@ -1,0 +1,48 @@
+[
+  {
+    "id": "plan1",
+    "name": "Hobby",
+    "price": 1000,
+    "priceWithDesign": 600,
+    "priceWithPaymentFunction": 0,
+    "description": "Página única de atração, com design moderno com foco em exibir o seu negócio para seus clientes.",
+    "features": [
+      { "available": true, "name": "Inclui uma única página" },
+      { "available": true, "name": "Desconto em disponibilização de design" },
+      { "available": false, "name": "Banco de dados" },
+      { "available": false, "name": "Sistema de login / Autênticação" },
+      { "available": false, "name": "Manutenção" },
+      { "available": false, "name": "Sistema de pagamento" }
+    ],
+    "improvements": ["Preciso de manutenção mensal", "Tenho o design pronto"],
+    "warning": "Após reunião com o cliente e decisão de prazos esse valor pode variar."
+  },
+  {
+    "id": "plan2",
+    "name": "Pro",
+    "price": 3000,
+    "priceWithDesign": 1500,
+    "priceWithPaymentFunction": 2000,
+    "description": "Infinitas páginas de produtos, posts, projetos e até três páginas com diferentes designs, para exibir os seus produtos, cadastrar clientes e facilitar o seu negócio.",
+    "features": [
+      {
+        "available": true,
+        "name": "Inclui até três páginas web + infinitas dinâmicas"
+      },
+      { "available": true, "name": "Desconto em disponibilização de design" },
+      {
+        "available": true,
+        "name": "Banco de dados (sujeito a análise de preços)"
+      },
+      { "available": true, "name": "Sistema de login / Autênticação" },
+      { "available": false, "name": "Manutenção" },
+      { "available": true, "name": "Sistema de pagamento (se necessário)" }
+    ],
+    "improvements": [
+      "Preciso de manutenção mensal",
+      "Tenho o design pronto",
+      "Preciso de um sistema de pagamento"
+    ],
+    "warning": "Após reunião com o cliente e decisão de prazos esse valor pode variar."
+  }
+]
