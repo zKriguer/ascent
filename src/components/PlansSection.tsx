@@ -31,6 +31,11 @@ const PlansSection = (props: Props) => {
         initialSlide={1}
         slidesPerView={"auto"}
         navigation={true}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: true,
+        }}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -39,7 +44,7 @@ const PlansSection = (props: Props) => {
           slideShadows: false,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         {plans.map((item: Plan) => (

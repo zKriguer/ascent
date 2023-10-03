@@ -16,7 +16,7 @@ const Nav = (props: Props) => {
         <p className="hover:text-orange-600 hover:underline">Preços</p>
       </div>
 
-      <div className="flex items-center gap-4 hidden md:flex">
+      <div className="items-center gap-4 hidden md:flex">
         <Avatar>
           <AvatarImage src="https://cdn.discordapp.com/attachments/1127027828811108383/1156223123662839859/image.png?ex=65143032&is=6512deb2&hm=445a5124b3d9a897bb9876f0b1ce01b121751d3baaeb946c061dcfe1641ba9c1&" />
           <AvatarFallback>Mamanse</AvatarFallback>
