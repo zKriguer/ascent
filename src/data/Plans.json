@@ -2,9 +2,8 @@
   {
     "id": "plan1",
     "name": "Hobby",
+    "image": "/images/singlepage.svg",
     "price": 1000,
-    "priceWithDesign": 600,
-    "priceWithPaymentFunction": 0,
     "description": "Página única de atração, com design moderno com foco em exibir o seu negócio para seus clientes.",
     "features": [
       { "available": true, "name": "Inclui uma única página" },
@@ -14,15 +13,21 @@
       { "available": false, "name": "Manutenção" },
       { "available": false, "name": "Sistema de pagamento" }
     ],
-    "improvements": ["Preciso de manutenção mensal", "Tenho o design pronto"],
+    "improvements": [
+      {
+        "title": "Preciso de manutenção mensal",
+        "type": 1,
+        "price": 0
+      },
+      { "title": "Não tenho o design pronto", "type": 2, "price": 500 }
+    ],
     "warning": "Após reunião com o cliente e decisão de prazos esse valor pode variar."
   },
   {
     "id": "plan2",
     "name": "Pro",
+    "image": "/images/singlepage.svg",
     "price": 3000,
-    "priceWithDesign": 1500,
-    "priceWithPaymentFunction": 2000,
     "description": "Infinitas páginas de produtos, posts, projetos e até três páginas com diferentes designs, para exibir os seus produtos, cadastrar clientes e facilitar o seu negócio.",
     "features": [
       {
@@ -39,9 +44,52 @@
       { "available": true, "name": "Sistema de pagamento (se necessário)" }
     ],
     "improvements": [
-      "Preciso de manutenção mensal",
-      "Tenho o design pronto",
-      "Preciso de um sistema de pagamento"
+      {
+        "title": "Preciso de manutenção mensal",
+        "type": 1,
+        "price": 0
+      },
+      { "title": "Não tenho o design pronto", "type": 2, "price": 1500 },
+      {
+        "title": "Preciso de um sistema de pagamento",
+        "type": 3,
+        "price": 2000
+      }
+    ],
+    "warning": "Após reunião com o cliente e decisão de prazos esse valor pode variar."
+  },
+  {
+    "id": "plan3",
+    "name": "Android",
+    "image": "/images/android.svg",
+    "price": 4000,
+    "description": "Aplicativo android com diversas telas, funcionalidades, e disponibilizado na play store para seus clientes.",
+    "features": [
+      {
+        "available": true,
+        "name": "Inclui até três telas diferentes + listas de itens/produtos/etc"
+      },
+      { "available": true, "name": "Desconto em disponibilização de design" },
+      {
+        "available": true,
+        "name": "Banco de dados (sujeito a análise de preços)"
+      },
+      { "available": true, "name": "Sistema de login / Autênticação" },
+      { "available": false, "name": "Manutenção" },
+      { "available": true, "name": "Sistema de pagamento (se necessário)" }
+    ],
+    "improvements": [
+      {
+        "title": "Preciso de manutenção mensal",
+        "type": 1,
+        "price": 0
+      },
+      { "title": "Não tenho o design pronto", "type": 2, "price": 1500 },
+      {
+        "title": "Preciso de um sistema de pagamento",
+        "type": 3,
+        "price": 2000
+      }
     ],
     "warning": "Após reunião com o cliente e decisão de prazos esse valor pode variar."
   }

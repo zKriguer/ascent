@@ -4,7 +4,7 @@ import "@fontsource-variable/inter";
 import AttractionButton from "../components/AttractionButton";
 import "@/src/styles/globals.css";
 import Layout from "@/src/layouts/Layout.astro";
-import PriceCard from "../components/PlansSection";
+import PriceSection from "../components/PlansSection";
 ---
 
 <Layout>
@@ -22,7 +22,7 @@ import PriceCard from "../components/PlansSection";
       class="flex lg:flex-row flex-col w-full justify-center gap-12 items-center"
     >
       <div class="w-4/5 lg:w-[85ch] flex flex-col justify-center gap-8">
-        <p class="text-center text-xl text-zinc-400">
+        <p class="text-left md:text-center text-lg md:text-xl text-zinc-400">
           A <strong> Ascent</strong> organiza desenvolvedores freelancer para
           que seu projeto seja entregue com qualidade e no prazo. Se voce é um
           desenvolvedor freelancer, a <strong> Ascent</strong> te ajuda a
@@ -37,19 +37,23 @@ import PriceCard from "../components/PlansSection";
     </div>
   </section>
   <section
-    class="h-full flex justify-center items-center flex-col gap-8 lg:gap-12 overflow-hidden"
+    class="h-full flex justify-center items-center flex-col lg:gap-12 overflow-hidden"
   >
     <h1
       style={{ fontFamily: "Roboto Mono Variable" }}
-      class="text-3xl lg:text-6xl font-black w-full md:w-1/2 text-center"
+      class="text-xl lg:text-6xl font-black w-full md:w-1/2 text-center px-2"
     >
       Encontre o plano ideal para seu projeto
     </h1>
 
-    <div
-      class="flex lg:flex-row flex-col w-full justify-center gap-12 items-center"
-    >
-      <PriceCard client:visible />
+    <div class="flex lg:flex-row flex-col w-full gap-12">
+      <PriceSection client:load />
     </div>
+  </section>
+
+  <section
+    class="h-full flex justify-center items-center flex-col gap-8 lg:gap-12 overflow-hidden"
+  >
+    <h1>Nova seção</h1>
   </section>
 </Layout>

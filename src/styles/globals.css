@@ -5,3 +5,46 @@ body {
   font-feature-settings: "cv11", "salt", "ss01", "ss03", "cv01", "cv02", "cv03",
     "cv04", "cv05", "cv06", "cv09", "cv10";
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ffa200 #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffa200;
+  border-radius: 8px;
+  border: 3px solid #ffffff00;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: fit-content;
+  height: fit-content;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffa200;
+}
+
+.swiper-pagination {
+  padding-top: 10px;
+}
