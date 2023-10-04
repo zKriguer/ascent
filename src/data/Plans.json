@@ -63,11 +63,11 @@
     "name": "Android",
     "image": "/images/android.svg",
     "price": 4000,
-    "description": "Aplicativo android com diversas telas, funcionalidades, e disponibilizado na play store para seus clientes.",
+    "description": "Aplicativo android com diversas telas, funcionalidades, disponibilizado na play store para seus clientes.",
     "features": [
       {
         "available": true,
-        "name": "Inclui até três telas diferentes + listas de itens/produtos/etc"
+        "name": "Inclui até três telas diferentes"
       },
       { "available": true, "name": "Desconto em disponibilização de design" },
       {

@@ -15,6 +15,7 @@ import {
   Pagination,
 } from "swiper/modules";
 import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 type Props = {};
 
 const PlansSection = (props: Props) => {
@@ -23,7 +24,7 @@ const PlansSection = (props: Props) => {
   );
 
   return (
-    <section className="flex w-full items-center justify-center gap-12 h-full">
+    <div className="flex w-full items-center justify-center gap-12 h-full">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -45,18 +46,24 @@ const PlansSection = (props: Props) => {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-        className="mySwiper"
+        className={twMerge("mySwiper", "flex sm:hidden")}
       >
         {plans.map((item: Plan) => (
           <SwiperSlide
             className="flex items-center justify-center"
             key={item.id}
           >
-            <PriceCard plan={item} />
+            <PriceCard plan={item} checkboxKey="slider" />
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+
+      <div className="gap-8 flex-wrap items-center justify-center hidden sm:flex">
+        {plans.map((item: Plan) => (
+          <PriceCard plan={item} key={item.id} checkboxKey="flexbox" />
+        ))}
+      </div>
+    </div>
   );
 };
 

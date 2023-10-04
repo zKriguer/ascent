@@ -6,12 +6,13 @@ import { Button } from "./Button/Button";
 
 type Props = {
   plan: Plan;
+  checkboxKey: string;
 };
 
-const PriceCard = ({ plan }: Props) => {
+const PriceCard = ({ plan, checkboxKey }: Props) => {
   const [price, setPrice] = useState<number>(plan.price);
   return (
-    <div className="bg-black w-80 rounded-lg bg-opacity-40 h-full bg-clip-padding backdrop-filter backdrop-blur-md p-5 flex flex-col gap-8 justify-around transition ease-in-out delay-150 border-1 border-zinc-600 border">
+    <div className="bg-black w-80 rounded-lg bg-opacity-40 h-full bg-clip-padding backdrop-filter backdrop-blur-md p-5 flex flex-col gap-8 justify-around transition ease-in-out delay-150 border-1 border-zinc-600 border overflow-y-scroll">
       <div className="flex flex-col gap-2 items-start">
         <div className="flex justify-between w-full">
           <p className="font-black text-base w-fit">{plan.name}</p>
@@ -46,7 +47,7 @@ const PriceCard = ({ plan }: Props) => {
         {plan.improvements.map((improvement) => (
           <div className="text-xs font-bold w-full flex gap-2">
             <Checkbox
-              id={plan.id + improvement.title}
+              id={plan.id + improvement.title + checkboxKey}
               onCheckedChange={(checked) => {
                 if (checked) {
                   setPrice(price + improvement.price);
@@ -56,7 +57,7 @@ const PriceCard = ({ plan }: Props) => {
               }}
             />
             <label
-              htmlFor={plan.id + improvement.title}
+              htmlFor={plan.id + improvement.title + checkboxKey}
               className="text-sm only:leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer font-light"
             >
               {improvement.title}
