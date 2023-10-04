@@ -18,13 +18,13 @@ const Nav = (props: Props) => {
 
       <div className="items-center gap-4 hidden md:flex">
         <Avatar>
-          <AvatarImage src="https://cdn.discordapp.com/attachments/1127027828811108383/1156223123662839859/image.png?ex=65143032&is=6512deb2&hm=445a5124b3d9a897bb9876f0b1ce01b121751d3baaeb946c061dcfe1641ba9c1&" />
-          <AvatarFallback>Mamanse</AvatarFallback>
+          <AvatarImage src="https://cdn.discordapp.com/attachments/1003086571098087455/1159240429305335900/Default_Printable_sticker_about_minimal_cute_cartoon_friendly_1_2243daa5-b8ea-4200-a220-0a23abe36628_1.jpg?ex=65304dc7&is=651dd8c7&hm=af1ceac49f5631a72ffee2a1e7c3e6d6b4c5fd54c0e4a26cf4dd7009d4abbc6a&" />
+          <AvatarFallback>User</AvatarFallback>
         </Avatar>
         <div className="leading-none">
-          <p>Richard Machado</p>
+          <p>Usuário Anônimo</p>
           <p className="text-orange-600 text-xs selection:bg-white">
-            Desenvolvedor
+            Cliente
           </p>
         </div>
       </div>
