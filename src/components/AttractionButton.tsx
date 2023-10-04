@@ -4,6 +4,7 @@ import CalModal from "./CalModal";
 type AttractionButtonProps = {
   isClient: boolean;
 };
+
 const AttractionButton = ({ isClient }: AttractionButtonProps) => {
   return (
     <div className="flex gap-8 justify-center w-full items-center col-span-1">
@@ -18,7 +19,7 @@ const AttractionButton = ({ isClient }: AttractionButtonProps) => {
                 console.log("oi");
               }}
             >
-              <p>Quero contratar</p>
+              <p className="text-center w-full">Quero contratar</p>
             </Button>
           </CalModal>
         </div>

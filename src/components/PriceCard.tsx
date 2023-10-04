@@ -3,6 +3,7 @@ import type { Plan } from "../lib/utils";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Checkbox } from "./ui/checkbox";
 import { Button } from "./Button/Button";
+import CalModal from "./CalModal";
 
 type Props = {
   plan: Plan;
@@ -100,12 +101,18 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
       <div className="flex flex-col gap-2 overflow-y-scroll overflow-x-hidden">
         {plan.features.map((feature) =>
           feature.available ? (
-            <div className="text-sm font-bold w-full flex gap-2 items-center">
+            <div
+              className="text-sm font-bold w-full flex gap-2 items-center"
+              key={feature.name + plan.id}
+            >
               <CheckCircle2 size={18} color="white" />
               <p>{feature.name}</p>
             </div>
           ) : (
-            <div className="text-xs font-bold w-full flex gap-2 items-center">
+            <div
+              className="text-xs font-bold w-full flex gap-2 items-center"
+              key={feature.name + plan.id}
+            >
               <XCircle size={18} color="white" />
               <p>{feature.name}</p>
             </div>
@@ -115,18 +122,19 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
 
       <div className="flex flex-col gap-2 h-16">
         {plan.improvements.map((improvement) => (
-          <div className="text-sm font-bold w-full flex gap-2 items-center">
+          <div
+            className="text-sm font-bold w-full flex gap-2 items-center"
+            key={improvement.title + plan.id}
+          >
             <Checkbox
               id={plan.id + improvement.title + checkboxKey}
               onCheckedChange={(checked) => {
                 if (checked) {
                   setPrice(price + improvement.price);
                   insertPlanWithImprovementsSelected(plan.id, improvement);
-                  console.log(plansImprovements);
                 } else {
                   setPrice(price - improvement.price);
                   insertPlanWithImprovementsSelected(plan.id, improvement);
-                  console.log(plansImprovements);
                 }
               }}
             />
@@ -139,9 +147,18 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
           </div>
         ))}
       </div>
-      <Button size="md" color="primary">
-        Contratar plano
-      </Button>
+      <CalModal>
+        <Button
+          size="md"
+          color="primary"
+          className="h-fit group flex w-full"
+          onClick={async () => {
+            console.log("oi");
+          }}
+        >
+          <p className="text-center w-full">Quero contratar</p>
+        </Button>
+      </CalModal>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -8,11 +8,22 @@ import {
   DialogTrigger,
 } from "@/src/components/ui/dialog.tsx";
 //@ts-expect-error
-import Cal from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 type Props = { children: React.ReactNode };
 
 const CalModal = ({ children }: Props) => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal("on", {
+        action: "bookingSuccessful",
+        callback: () => {
+          console.log("Booking successful");
+        },
+      });
+    })();
+  }, []);
   return (
     <Dialog>
       <DialogTrigger>{children}</DialogTrigger>
