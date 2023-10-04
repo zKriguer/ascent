@@ -6,6 +6,9 @@ body {
     "cv04", "cv05", "cv06", "cv09", "cv10";
 }
 
+* {
+  overflow-x: none;
+}
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
