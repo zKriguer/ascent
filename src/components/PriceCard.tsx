@@ -18,17 +18,13 @@ type PlanWithImprovements = {
 const PriceCard = ({ plan, checkboxKey }: Props) => {
   const [price, setPrice] = useState<number>(plan.price);
 
-  const [plansImprovements, setPlansImprovements] = useState<
-    PlanWithImprovements[]
-  >([]);
-
   function getLocalStorage(key: string) {
     const data = window.localStorage.getItem(key);
 
     return JSON.parse(data || "[]");
   }
 
-  function setLocalStorage(key: string, value: any) {
+  function setLocalStorage(key: string, value: unknown) {
     window.localStorage.setItem(key, JSON.stringify(value));
   }
 
@@ -59,7 +55,7 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
             });
 
             if (plan.improvements.length < 1) {
-              actualPlans.splice(actualPlans.indexOf(plan), 1);
+              return actualPlans.splice(actualPlans.indexOf(plan), 1);
             }
           } else {
             plan.improvements.push(selectedImprovement);
@@ -70,7 +66,6 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
       });
 
       setLocalStorage("plansImprovements", actualPlans);
-      setPlansImprovements(actualPlans);
     } else {
       const newPlan = {
         id: planId,
@@ -79,7 +74,6 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
 
       actualPlans.push(newPlan);
       setLocalStorage("plansImprovements", actualPlans);
-      setPlansImprovements(actualPlans);
     }
   };
 

@@ -1,13 +1,10 @@
-import React from "react";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "@/src/components/ui/avatar.tsx";
 
-type Props = {};
-
-const Nav = (props: Props) => {
+const Nav = () => {
   return (
     <div className="w-full bg-zinc-900 h-16 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-25 absolute items-center flex px-8 justify-around">
       <div className="flex items-center gap-4 text-zinc-400 hover:cursor-pointer underline-offset-8 ">
@@ -23,9 +20,7 @@ const Nav = (props: Props) => {
         </Avatar>
         <div className="leading-none">
           <p>Usuário Anônimo</p>
-          <p className="text-orange-600 text-xs selection:bg-white">
-            Cliente
-          </p>
+          <p className="text-orange-600 text-xs selection:bg-white">Cliente</p>
         </div>
       </div>
     </div>
