@@ -1,6 +1,6 @@
 import plans from "@/src/data/Plans.json";
-import type { Plan } from "../lib/utils";
 
+import type { Plan } from "../lib/utils";
 import PriceCard from "./PriceCard";
 
 import "swiper/css";

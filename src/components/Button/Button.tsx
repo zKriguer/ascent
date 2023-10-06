@@ -1,5 +1,6 @@
-import { tv } from "tailwind-variants";
 import { twMerge } from "tailwind-merge";
+import { tv } from "tailwind-variants";
+
 import styles from "./styles.module.css";
 
 const button = tv({

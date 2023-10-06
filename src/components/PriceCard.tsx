@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import type { Plan } from "../lib/utils";
+
 import { CheckCircle2, XCircle } from "lucide-react";
-import { Checkbox } from "./ui/checkbox";
+
+import type { Plan } from "../lib/utils";
 import { Button } from "./Button/Button";
 import CalModal from "./CalModal";
+import { Checkbox } from "./ui/checkbox";
 
 type Props = {
   plan: Plan;

@@ -1,9 +1,11 @@
 "use client";
 
 import * as React from "react";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
+
 import { XSquare } from "lucide-react";
+
 import { cn } from "@/src/lib/utils";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 const Dialog = DialogPrimitive.Root;
 
