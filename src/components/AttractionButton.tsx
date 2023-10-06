@@ -7,25 +7,25 @@ type AttractionButtonProps = {
 
 const AttractionButton = ({ isClient }: AttractionButtonProps) => {
   return (
-    <div className="flex gap-8 justify-center w-full items-center col-span-1">
+    <div className="col-span-1 flex w-full items-center justify-center gap-8">
       {isClient ? (
-        <div className="flex relative w-full justify-center">
+        <div className="relative flex w-full justify-center">
           <CalModal>
             <Button
               size="md"
               color="primary"
-              className="h-fit group flex"
+              className="group flex h-fit"
               onClick={async () => {
                 console.log("oi");
               }}
             >
-              <p className="text-center w-full">Quero contratar</p>
+              <p className="w-full text-center">Quero contratar</p>
             </Button>
           </CalModal>
         </div>
       ) : (
-        <div className="flex w-full justify-center relative col-span-1">
-          <Button size="md" color="secondary" className="h-fit group flex">
+        <div className="relative col-span-1 flex w-full justify-center">
+          <Button size="md" color="secondary" className="group flex h-fit">
             <p> Quero ser Ascent</p>
           </Button>
         </div>
