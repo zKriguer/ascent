@@ -2,12 +2,10 @@ import React, { useEffect } from "react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/src/components/ui/dialog.tsx";
-//@ts-expect-error
+
 import Cal, { getCalApi } from "@calcom/embed-react";
 
 type Props = { children: React.ReactNode };
