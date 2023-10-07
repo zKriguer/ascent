@@ -1,24 +1,25 @@
-import { tv } from "tailwind-variants";
 import { twMerge } from "tailwind-merge";
+import { tv } from "tailwind-variants";
+
 import styles from "./styles.module.css";
 
 const button = tv({
-  base: "font-medium text-black active:opacity-80 tracking-wider rounded-lg",
+  base: "rounded-lg font-medium tracking-wider text-black active:opacity-80",
   variants: {
     color: {
       primary:
-        "transition-colors duration-300 ease-linear bg-brand-pink hover:bg-orange-600 font-sans bg-white hover:text-white",
+        "bg-white font-sans transition-colors duration-300 ease-linear hover:bg-orange-600 hover:text-white",
       secondary:
-        "transition-colors duration-300 ease-linear  hover:text-white bg-white text-black hover:bg-orange-600",
+        "bg-white text-black transition-colors  duration-300 ease-linear hover:bg-orange-600 hover:text-white",
       maionelga:
-        "transition-colors duration-300 ease-linear hover:bg-purple-700 hover:text-white text-black bg-white",
+        "bg-white text-black transition-colors duration-300 ease-linear hover:bg-purple-700 hover:text-white",
       clean:
-        "bg-transparent hover:scale-110 transition-all duration-300 ease-in-out text-brand-pink-dark shadow-none",
+        "bg-transparent shadow-none transition-all duration-300 ease-in-out hover:scale-110",
       neon: twMerge(styles["custom-btn"], styles["neon-btn"]),
     },
     size: {
-      sm: "text-xs p-2",
-      md: "text-base md:p-3 md:px-8 p-2",
+      sm: "p-2 text-xs",
+      md: "p-2 text-base md:p-3 md:px-8",
       lg: "p-6 text-lg",
     },
   },

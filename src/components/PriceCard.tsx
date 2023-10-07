@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import type { Plan } from "../lib/utils";
+
 import { CheckCircle2, XCircle } from "lucide-react";
-import { Checkbox } from "./ui/checkbox";
+
+import type { Plan } from "../lib/utils";
 import { Button } from "./Button/Button";
 import CalModal from "./CalModal";
+import { Checkbox } from "./ui/checkbox";
 
 type Props = {
   plan: Plan;
@@ -78,25 +80,25 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
   };
 
   return (
-    <div className="bg-black w-96 rounded-lg bg-opacity-40 h-full bg-clip-padding backdrop-filter backdrop-blur-md p-5 flex flex-col gap-12 justify-around border-1 border-zinc-600 border overflow-y-scroll hover:bg-zinc-900 hover:bg-opacity-50 hover:scale-[101%] transition-all duration-100 ">
-      <div className="flex flex-col gap-1 items-start">
-        <div className="flex justify-between w-full">
-          <p className="font-black text-base w-fit">{plan.name}</p>
+    <div className="flex h-full w-96 flex-col justify-around gap-12 overflow-y-scroll rounded-lg border border-zinc-600 bg-black/40 bg-clip-padding p-5 backdrop-blur-md transition-all duration-100 hover:scale-[101%] hover:bg-zinc-900/50">
+      <div className="flex flex-col items-start gap-1">
+        <div className="flex w-full justify-between">
+          <p className="w-fit text-base font-black">{plan.name}</p>
           <img src={plan.image} alt={plan.name} />
         </div>
-        <p className="text-sm text-orange-600 select-none">a partir de:</p>
+        <p className="select-none text-sm text-orange-600">a partir de:</p>
         <p className="text-4xl font-semibold">R$ {price}</p>
-        <p className="text-base text-zinc-300 h-28">{plan.description}</p>
-        <p className="text-center text-xs text-orange-600 font-semibold select-none">
+        <p className="h-28 text-base text-zinc-300">{plan.description}</p>
+        <p className="select-none text-center text-xs font-semibold text-orange-600">
           {plan.warning}
         </p>
       </div>
 
-      <div className="flex flex-col gap-2 overflow-y-scroll overflow-x-hidden">
+      <div className="flex flex-col gap-2 overflow-x-hidden overflow-y-scroll">
         {plan.features.map((feature) =>
           feature.available ? (
             <div
-              className="text-sm font-bold w-full flex gap-2 items-center"
+              className="flex w-full items-center gap-2 text-sm font-bold"
               key={feature.name + plan.id}
             >
               <CheckCircle2 size={18} color="white" />
@@ -104,7 +106,7 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
             </div>
           ) : (
             <div
-              className="text-xs font-bold w-full flex gap-2 items-center"
+              className="flex w-full items-center gap-2 text-xs font-bold"
               key={feature.name + plan.id}
             >
               <XCircle size={18} color="white" />
@@ -114,10 +116,10 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
         )}
       </div>
 
-      <div className="flex flex-col gap-2 h-16">
+      <div className="flex h-16 flex-col gap-2">
         {plan.improvements.map((improvement) => (
           <div
-            className="text-sm font-bold w-full flex gap-2 items-center"
+            className="flex w-full items-center gap-2 text-sm font-bold"
             key={improvement.title + plan.id}
           >
             <Checkbox
@@ -134,7 +136,7 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
             />
             <label
               htmlFor={plan.id + improvement.title + checkboxKey}
-              className="text-base only:leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer font-light"
+              className="cursor-pointer text-base font-light only:leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {improvement.title}
             </label>
@@ -145,12 +147,12 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
         <Button
           size="md"
           color="primary"
-          className="h-fit group flex w-full"
+          className="group flex h-fit w-full"
           onClick={async () => {
             console.log("oi");
           }}
         >
-          <p className="text-center w-full">Quero contratar</p>
+          <p className="w-full text-center">Quero contratar</p>
         </Button>
       </CalModal>
     </div>

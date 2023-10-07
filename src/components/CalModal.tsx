@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
+
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
 } from "@/src/components/ui/dialog.tsx";
-
 import Cal, { getCalApi } from "@calcom/embed-react";
 
 type Props = { children: React.ReactNode };
