@@ -1,15 +1,10 @@
 ---
-import "@/src/styles/globals.css";
-import "@fontsource-variable/roboto-mono";
-import "@fontsource-variable/inter";
-
 import Layout from "@/src/layouts/Layout.astro";
 
 import AttractionButton from "../components/AttractionButton";
-import PriceSection from "../components/PlansSection";
 ---
 
-<Layout>
+<Layout title="Ascent">
   <section
     class="flex h-full animate-fade-down flex-col items-center justify-center gap-8 overflow-hidden lg:gap-12"
   >
@@ -36,20 +31,6 @@ import PriceSection from "../components/PlansSection";
           <!-- <AttractionButton isClient={false} client:load /> -->
         </div>
       </div>
-    </div>
-  </section>
-  <section
-    class="flex h-fit flex-col items-center justify-center gap-8 overflow-hidden lg:gap-12"
-  >
-    <h1
-      style={{ fontFamily: "Roboto Mono Variable" }}
-      class="w-full px-2 text-center text-xl font-black md:w-1/2 lg:text-6xl"
-    >
-      Encontre o plano ideal para seu projeto
-    </h1>
-
-    <div class="flex w-full flex-col gap-12 lg:flex-row">
-      <PriceSection client:load />
     </div>
   </section>
 
