@@ -6,7 +6,7 @@ import {
 
 const Nav = () => {
   return (
-    <div className="absolute z-50 flex h-16 w-full items-center justify-around rounded-md bg-zinc-900/25 bg-clip-padding px-8 backdrop-blur-md">
+    <div className="sticky z-50 flex h-16 w-full items-center justify-around rounded-md bg-zinc-900/25 bg-clip-padding px-8 backdrop-blur-md">
       <div className="flex items-center gap-4 text-zinc-400 underline-offset-8 hover:cursor-pointer ">
         <a href="/">
           <img src="/images/Ascent.svg" className="h-8" />

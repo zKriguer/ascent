@@ -1,15 +1,24 @@
 ---
 import Layout from "@/src/layouts/Layout.astro";
 
+import CalButton from "@/src/components/CalButton";
 import PlansSection from "@/src/components/PlansSection";
 ---
 
 <Layout title="Ascent - pricing">
   <section
-    class="flex h-full flex-col items-center justify-center gap-8 overflow-hidden lg:gap-6"
+    class="flex flex-col items-center justify-center gap-4 overflow-hidden pt-12"
   >
     <div class="flex w-full flex-col gap-12 lg:flex-row">
       <PlansSection client:load />
+    </div>
+    <div class="flex items-center gap-2">
+      <p class="text-lg">
+        Quero um aplicativo ou site tipo <strong
+          >ifood, netflix, youtube, uber...</strong
+        > vamos conversar melhor?
+      </p>
+      <CalButton client:visible />
     </div>
   </section>
 </Layout>
