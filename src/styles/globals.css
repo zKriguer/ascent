@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: "Inter Variable", sans-serif;
+    background-image: url("/images/background.svg");
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "cv11", "salt", "ss01", "ss03", "cv01", "cv02",
+      "cv03", "cv04", "cv05", "cv06", "cv09", "cv10";
+
+    @apply h-full bg-zinc-950 text-white selection:bg-orange-600;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ffa200 #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffa200;
+    border-radius: 8px;
+    border: 3px solid #ffffff00;
+  }
+}
 body {
   font-family: "Inter Variable", sans-serif;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1096" height="1031" fill="none" viewBox="0 0 1096 1031"><g opacity=".4"><circle cx="690" cy="406" r="406" fill="url(%23a)" fill-opacity=".8"/><circle cx="533.5" cy="668.5" r="362.5" fill="url(%23b)"/><circle cx="431.5" cy="503.5" r="431.5" fill="url(%23c)"/></g><defs><radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(0 406 -406 0 690 406)" gradientUnits="userSpaceOnUse"><stop offset=".224" stop-color="%23EF4C4B" stop-opacity=".24"/><stop offset="1" stop-color="%23EF4C4B" stop-opacity="0"/></radialGradient><radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="rotate(90 -67.5 601) scale(362.5)" gradientUnits="userSpaceOnUse"><stop offset=".224" stop-color="%23F59220" stop-opacity=".24"/><stop offset="1" stop-color="%23F59220" stop-opacity="0"/></radialGradient><radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="rotate(90 -36 467.5) scale(431.5)" gradientUnits="userSpaceOnUse"><stop offset=".224" stop-color="%236A57A4" stop-opacity=".24"/><stop offset="1" stop-color="%236A57A4" stop-opacity="0"/></radialGradient></defs></svg>');
