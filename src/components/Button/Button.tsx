@@ -10,7 +10,7 @@ const button = tv({
       primary:
         "bg-white font-sans transition-colors duration-300 ease-linear hover:bg-orange-600 hover:text-white",
       secondary:
-        "bg-white text-black transition-colors  duration-300 ease-linear hover:bg-orange-600 hover:text-white",
+        "bg-orange-600 text-white transition-colors  duration-300 ease-linear hover:bg-white hover:text-black",
       maionelga:
         "bg-white text-black transition-colors duration-300 ease-linear hover:bg-purple-700 hover:text-white",
       clean:

@@ -9,8 +9,8 @@ import "swiper/css/pagination";
 
 const PlansSection = () => {
   return (
-    <div className="flex h-full w-full items-center justify-center gap-12 pb-2">
-      <div className="flex flex-wrap items-center justify-center gap-8">
+    <div className="flex h-full w-full p-2">
+      <div className="flex w-full flex-wrap items-center justify-center gap-8">
         {plans.map((item: Plan) => (
           <PriceCard
             plan={item}

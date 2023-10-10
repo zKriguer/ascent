@@ -6,11 +6,18 @@ import {
 
 const Nav = () => {
   return (
-    <div className="absolute flex h-16 w-full items-center justify-around rounded-md bg-zinc-900/25 bg-clip-padding px-8 backdrop-blur-md">
+    <div className="sticky z-50 flex h-16 w-full items-center justify-around rounded-md bg-zinc-900/25 bg-clip-padding px-8 backdrop-blur-md">
       <div className="flex items-center gap-4 text-zinc-400 underline-offset-8 hover:cursor-pointer ">
-        <img src="/images/Ascent.svg" className="h-8" />
-        <p className="hover:text-orange-600 hover:underline">Inicio</p>
-        <p className="hover:text-orange-600 hover:underline">Preços</p>
+        <a href="/">
+          <img src="/images/Ascent.svg" className="h-8" />
+        </a>
+
+        <a className="hover:text-orange-600 hover:underline" href="/">
+          Inicio
+        </a>
+        <a className="hover:text-orange-600 hover:underline" href="/pricing">
+          Preços
+        </a>
       </div>
 
       <div className="hidden items-center gap-4 md:flex">
