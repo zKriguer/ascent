@@ -80,7 +80,7 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
   };
 
   return (
-    <div className="flex h-full w-96 flex-col justify-around gap-12 overflow-y-scroll rounded-lg border border-zinc-600 bg-black/40 bg-clip-padding p-5 backdrop-blur-md transition-all duration-100 hover:scale-[101%] hover:bg-zinc-900/50">
+    <div className="flex h-[700px] w-96 flex-col justify-around gap-12 overflow-y-scroll rounded-lg border border-zinc-600 bg-black/40 bg-clip-padding p-5 backdrop-blur-md transition-all duration-100 hover:scale-[101%] hover:bg-zinc-900/50">
       <div className="flex flex-col items-start gap-1">
         <div className="flex w-full justify-between">
           <p className="w-fit text-base font-black">{plan.name}</p>
