@@ -1,11 +1,11 @@
 ---
-import "@/src/styles/globals.css";
-
+import Nav from "../components/Nav.astro";
 import { SEO, type Props as SEOProps } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
+
+import "@/src/styles/globals.css";
 import "@fontsource-variable/roboto-mono";
 import "@fontsource-variable/inter";
-
-import Nav from "../components/Nav";
 
 export type LayoutProps = SEOProps;
 
@@ -23,9 +23,10 @@ const { props } = Astro;
       description="A Ascent organiza desenvolvedores freelancer para que seu projeto seja entregue com qualidade e no prazo. Se voce é um desenvolvedor freelancer, a Ascent te ajuda a encontrar projetos que se encaixam no seu perfil."
       {...props}
     />
+    <ViewTransitions />
   </head>
-  <body>
-    <Nav client:load />
+  <body transition:animate="slide">
+    <Nav />
     <slot />
   </body>
 </html>
