@@ -1,32 +1,30 @@
 ---
 import "@/src/styles/globals.css";
+
+import { SEO, type Props as SEOProps } from "astro-seo";
 import "@fontsource-variable/roboto-mono";
 import "@fontsource-variable/inter";
-import { ViewTransitions } from "astro:transitions";
 
 import Nav from "../components/Nav";
-const { title } = Astro.props;
+
+export type LayoutProps = SEOProps;
+
+type Props = LayoutProps;
+
+const { props } = Astro;
 ---
 
-<html lang="en" class="h-full" transition:animate="fade">
+<html lang="pt-BR" class="h-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <ViewTransitions />
-    <title>{title}</title>
+    <SEO
+      titleDefault="Ascent Software"
+      description="A Ascent organiza desenvolvedores freelancer para que seu projeto seja entregue com qualidade e no prazo. Se voce é um desenvolvedor freelancer, a Ascent te ajuda a encontrar projetos que se encaixam no seu perfil."
+      {...props}
+    />
   </head>
-  <body
-    style={{
-      margin: 0,
-      height: "100%",
-      fontFamily: "Inter Variable",
-      backgroundImage:
-        "url('https://global-uploads.webflow.com/60e4613c6af8ff8ba41157b4/64d334175cab998e118f5105_radial-gradient-bg.svg')",
-      backgroundPosition: "center",
-      backgroundRepeat: "repeat-y",
-    }}
-    class="bg-zinc-950 text-white selection:bg-orange-600"
-  >
+  <body>
     <Nav client:load />
     <slot />
   </body>
