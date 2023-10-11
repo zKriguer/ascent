@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Barbearia",
+    "description": "Site para fazer agendamentos para uma barbearia de Atibaia",
+    "image": "/images/barbearia_react.png",
+    "link": "https://barbearia-react.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Kriguer",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77925501?s=100&v=4",
+        "github_url": "https://github.com/zKriguer"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Utaka-chan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      }
+    ]
+  },
+  {
+    "name": "Calculadora",
+    "description": "Precisando de ajudas com contas? Acesse e resolucione seus problemas!",
+    "image": "/images/calculator.png",
+    "link": "https://calculator-lac-delta.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Maionese",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109695949?v=4",
+        "github_url": "https://github.com/MatheusLukas"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Utaka-chan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      }
+    ]
+  },
+  {
+    "name": "Calcula IMC",
+    "description": "Iniciou um projeto na academia e quer saber seu IMC? Acesse e descubra!",
+    "image": "/images/imc.png",
+    "link": "https://imc-ebon.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Maionese",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109695949?v=4",
+        "github_url": "https://github.com/MatheusLukas"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Utaka-chan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      }
+    ]
+  },
+  {
+    "name": "Timer",
+    "description": "Precisando cronometrar o tempo do miojo? Neste site te ajudamos com isso!",
+    "image": "/images/Learning-JavaScript.png",
+    "link": "https://timer-gamma-ashen.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Maionese",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109695949?v=4",
+        "github_url": "https://github.com/MatheusLukas"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Utaka-chan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      }
+    ]
+  },
+  {
+    "name": "Validar CPF",
+    "description": "Quer comprar aquela moto sem ser com seu CPF? Procure um e veja se ele funciona!",
+    "image": "/images/phonebook.png",
+    "link": "https://validate-cpf-nine.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Kriguer",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77925501?s=100&v=4",
+        "github_url": "https://github.com/zKriguer"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Utaka-chan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      },
+      {
+        "name": "Maionese",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109695949?v=4",
+        "github_url": "https://github.com/MatheusLukas"
+      },
+      {
+        "name": "Teste",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114110510?v=4",
+        "github_url": "https://github.com/JoaoPoncee"
+      }
+    ]
+  }
+]

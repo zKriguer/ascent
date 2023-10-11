@@ -1,0 +1,4 @@
+html,
+body {
+  @apply w-full h-full;
+}
