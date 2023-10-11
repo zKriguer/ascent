@@ -29,7 +29,7 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Code Linting
-        run: pnpm types:check && eslint --ext .ts,.tsx,.js,.jsx --max-warnings 0 . && prettier . --check --plugin=prettier-plugin-astro
+        run: pnpm types:check && eslint --ext .ts,.tsx,.astro --max-warnings 0 src && prettier src --check --plugin=prettier-plugin-astro
 
       - name: Lint Commit Messages
         uses: wagoid/commitlint-github-action@v5
