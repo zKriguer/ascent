@@ -8,7 +8,6 @@ import "@fontsource-variable/inter";
 import type { Data } from "@/src/lib/types/GithubRepository";
 
 import CardsProjects from "../CardsProjects/CardsProjects";
-import CardsProjectsCarrousel from "../CardsProjectsCarrousel/CardsProjectsCarrousel";
 function DynamicCards(data: Data) {
   const projects = data.data;
   console.log(projects);
@@ -183,8 +182,6 @@ function DynamicCards(data: Data) {
         divsCards={divsCards}
         reverse={reverse}
       />
-      <CardsProjectsCarrousel projects={projects} />
-      {/*  */}
     </div>
   );
 }

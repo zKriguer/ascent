@@ -2,14 +2,14 @@ import type React from "react";
 
 import type { Cards } from "@/src/lib/types/Cards";
 import type { GithubRepository } from "@/src/lib/types/GithubRepository";
+
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import {
   TooltipProvider,
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-} from "@radix-ui/react-tooltip";
-
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+} from "../ui/tooltip";
 
 type Props = {
   projects: GithubRepository[];
@@ -50,7 +50,7 @@ export default function name({ projects, divsCards, reverse }: Props) {
                         </Avatar>
                       </TooltipTrigger>
                       <TooltipContent>
-                        <a target="_blank" href={contributor.github_url}>
+                        <a href={contributor.github_url} target="_blank">
                           {contributor.name}
                         </a>
                       </TooltipContent>
@@ -68,7 +68,7 @@ export default function name({ projects, divsCards, reverse }: Props) {
                           </Avatar>
                         </TooltipTrigger>
                         <TooltipContent>
-                          <a target="_blank" href={contributor.github_url}>
+                          <a href={contributor.github_url} target="_blank">
                             {contributor.name}
                           </a>
                         </TooltipContent>
