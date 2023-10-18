@@ -10,7 +10,6 @@ import type { Data } from "@/src/lib/types/GithubRepository";
 import CardsProjects from "../CardsProjects/CardsProjects";
 function DynamicCards(data: Data) {
   const projects = data.data;
-  console.log(projects);
 
   const [divsCards, setDivsCards] = useState([
     {
@@ -73,9 +72,11 @@ function DynamicCards(data: Data) {
     },
   ]);
 
+  console.log(divsOptions, "divs");
+  console.log(divsCards, "cards");
+
   const [cardClicked, setCardClicked] = useState([{ id: 0, clicked: false }]);
   const [reverse, setReverse] = useState(false);
-  console.log(reverse);
 
   function switchCard(id: number) {
     const newDivsOptions = divsOptions.map((div, index) => {
@@ -92,6 +93,7 @@ function DynamicCards(data: Data) {
     let reverseDivsCards;
 
     const newDivsCards = [...divsCards];
+
     if (!reverse) {
       reverseDivsCards = newDivsCards.reverse();
       setReverse(true);

@@ -23,7 +23,7 @@ export default function name({ projects, divsCards, reverse }: Props) {
       {divsCards.map((div, index) => (
         <div
           key={div.id + 10}
-          className={`absolute flex h-[500px]  w-[600px] rounded-md border-2 border-zinc-700 bg-zinc-800 text-white transition-all duration-500  ease-linear  ${div.zIndex}  ${div.top} ${div.left}  flex-col`}
+          className={`absolute flex h-[500px]  w-[600px] rounded-md border-2 border-zinc-700 bg-zinc-800 text-white   ${div.zIndex}  ${div.top} ${div.left}  animate-fade-right flex-col duration-700  `}
         >
           <a
             href={projects[div.id]?.link}
