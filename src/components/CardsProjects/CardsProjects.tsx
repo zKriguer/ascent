@@ -1,5 +1,7 @@
 import type React from "react";
 
+import clsx from "clsx";
+
 import type { Cards } from "@/src/lib/types/Cards";
 import type { GithubRepository } from "@/src/lib/types/GithubRepository";
 
@@ -17,24 +19,29 @@ type Props = {
   reverse: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-export default function name({ projects, divsCards, reverse }: Props) {
+export function CardsProjects({ projects, divsCards, reverse }: Props) {
   return (
     <div className=" relative hidden w-full md:flex">
       {divsCards.map((div, index) => (
         <div
           key={div.id + 10}
-          className={`absolute flex h-[500px]  w-[600px] rounded-md border-2 border-zinc-700 bg-zinc-800 text-white   ${div.zIndex}  ${div.top} ${div.left}  animate-fade-right flex-col duration-700  `}
+          className={clsx(
+            `absolute flex h-[500px]  w-[600px] rounded-md border-2 border-zinc-700 bg-zinc-800 text-white ${div.zIndex}  ${div.top} ${div.left} animate-fade-right flex-col duration-500 animation-delay-200`,
+            reverse && "animate-fade-right",
+          )}
         >
-          <a
-            href={projects[div.id]?.link}
-            target="_blank"
-            className="h-[5%] text-center"
-            style={{ fontFamily: "Inter Variable" }}
-          >
-            {projects[div.id]?.link}
-          </a>
+          <div className="flex items-center justify-center">
+            <a
+              href={projects[div.id]?.link}
+              target="_blank"
+              className=" h-[5%]"
+              style={{ fontFamily: "Inter Variable" }}
+            >
+              {projects[div.id]?.link}
+            </a>
+          </div>
           <img
-            className="h-[85%] select-none rounded-3xl p-4"
+            className="h-[85%] select-none rounded-3xl object-cover p-4"
             src={projects[div.id]?.image}
           />
           <div className="flex flex-row gap-10 px-4 ">

@@ -15,9 +15,7 @@ const AttractionButton = ({ isClient }: AttractionButtonProps) => {
               size="md"
               color="primary"
               className="group flex h-fit"
-              onClick={async () => {
-                console.log("oi");
-              }}
+              onClick={async () => {}}
             >
               <p className="w-full text-center">Quero contratar</p>
             </Button>

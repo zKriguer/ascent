@@ -7,8 +7,9 @@ import "@fontsource-variable/roboto-mono";
 import "@fontsource-variable/inter";
 import type { Data } from "@/src/lib/types/GithubRepository";
 
-import CardsProjects from "../CardsProjects/CardsProjects";
-function DynamicCards(data: Data) {
+import { CardsProjects } from "../CardsProjects/CardsProjects";
+
+export function DynamicCards(data: Data) {
   const projects = data.data;
 
   const [divsCards, setDivsCards] = useState([
@@ -16,35 +17,30 @@ function DynamicCards(data: Data) {
       top: "top-[100px]",
       left: "left-[100px]",
       zIndex: "z-10",
-
       id: 4,
     },
     {
       top: "top-[80px]",
       left: "left-[80px]",
       zIndex: "z-20",
-
       id: 3,
     },
     {
       top: "top-[60px]",
       left: "left-[60px]",
       zIndex: "z-30",
-
       id: 2,
     },
     {
       top: "top-[40px]",
       left: "left-[40px]",
       zIndex: "z-40",
-
       id: 1,
     },
     {
       top: "top-[20px]",
       left: "left-[20px]",
       zIndex: "z-50",
-
       id: 0,
     },
   ]);
@@ -71,9 +67,6 @@ function DynamicCards(data: Data) {
       id: 4,
     },
   ]);
-
-  console.log(divsOptions, "divs");
-  console.log(divsCards, "cards");
 
   const [cardClicked, setCardClicked] = useState([{ id: 0, clicked: false }]);
   const [reverse, setReverse] = useState(false);
@@ -121,62 +114,57 @@ function DynamicCards(data: Data) {
   return (
     <div className="flex h-[600px] w-full flex-row">
       <div className="hidden w-full flex-col items-center gap-2 text-white md:flex">
-        {divsOptions.map(
-          (div) => (
-            console.log(div.id, "ID 3"),
-            (
-              <div
-                key={div.id}
-                onClick={() => switchCard(div.id)}
+        {divsOptions.map((div) => (
+          <div
+            key={div.id}
+            onClick={() => switchCard(div.id)}
+            className={clsx(
+              cardClicked[0]?.id === div.id ? "gap-4" : "justify-center",
+              `bg-gradient-to-br from-gray-400/10 to-black/20 bg-clip-padding p-4 shadow-inner backdrop-blur-md ${div.height} relative flex w-72 flex-col rounded-md border-2 border-zinc-700 transition-all duration-500 ease-in `,
+            )}
+          >
+            <div className={"flex justify-between"}>
+              <h1
                 className={clsx(
-                  cardClicked[0]?.id === div.id ? "gap-4" : "justify-center",
-                  `bg-gradient-to-br from-gray-400/10 to-black/20 bg-clip-padding p-4 shadow-inner backdrop-blur-md ${div.height} relative flex w-72 flex-col rounded-md border-2 border-zinc-700 transition-all duration-500 ease-in `,
+                  cardClicked[0]?.id === div.id &&
+                    "animate-fade animate-delay-200",
+                  "select-none",
                 )}
+                style={{ fontFamily: "Roboto Mono Variable" }}
               >
-                <div className={"flex justify-between"}>
-                  <h1
-                    className={clsx(
-                      cardClicked[0]?.id === div.id &&
-                        "animate-fade animate-delay-200",
-                      "select-none",
-                    )}
-                    style={{ fontFamily: "Roboto Mono Variable" }}
-                  >
-                    {projects[div.id]?.name}
-                  </h1>
-                  {cardClicked[0]?.id === div.id ? (
-                    <Minus
-                      className={clsx(
-                        cardClicked[0]?.id === div.id &&
-                          "animate-fade animate-delay-200 hover:cursor-pointer",
-                      )}
-                    />
-                  ) : (
-                    <Plus
-                      className={clsx(
-                        cardClicked[0]?.id === div.id &&
-                          "animate-fade animate-delay-200",
-                        "hover:cursor-pointer",
-                      )}
-                    />
-                  )}
-                </div>
-
-                <p
+                {projects[div.id]?.name}
+              </h1>
+              {cardClicked[0]?.id === div.id ? (
+                <Minus
                   className={clsx(
-                    "text-sm font-light text-orange-400 selection:bg-orange-500",
-                    div.id === cardClicked[0]?.id
-                      ? "block animate-fade  animation-delay-200 "
-                      : "hidden",
+                    cardClicked[0]?.id === div.id &&
+                      "animate-fade animate-delay-200 hover:cursor-pointer",
                   )}
-                  style={{ fontFamily: "Roboto Mono Variable" }}
-                >
-                  {projects[div.id]?.description}
-                </p>
-              </div>
-            )
-          ),
-        )}
+                />
+              ) : (
+                <Plus
+                  className={clsx(
+                    cardClicked[0]?.id === div.id &&
+                      "animate-fade animate-delay-200",
+                    "hover:cursor-pointer",
+                  )}
+                />
+              )}
+            </div>
+
+            <p
+              className={clsx(
+                "text-sm font-light text-orange-400 selection:bg-orange-500",
+                div.id === cardClicked[0]?.id
+                  ? "block animate-fade  animation-delay-200 "
+                  : "hidden",
+              )}
+              style={{ fontFamily: "Roboto Mono Variable" }}
+            >
+              {projects[div.id]?.description}
+            </p>
+          </div>
+        ))}
       </div>
       {/* Cards */}
       <CardsProjects
@@ -187,5 +175,3 @@ function DynamicCards(data: Data) {
     </div>
   );
 }
-
-export default DynamicCards;
