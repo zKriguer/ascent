@@ -144,14 +144,7 @@ const PriceCard = ({ plan, checkboxKey }: Props) => {
         ))}
       </div>
       <CalModal>
-        <Button
-          size="md"
-          color="primary"
-          className="group flex h-fit w-full"
-          onClick={async () => {
-            console.log("oi");
-          }}
-        >
+        <Button size="md" color="primary" className="group flex h-fit w-full">
           <p className="w-full text-center">Quero contratar</p>
         </Button>
       </CalModal>
