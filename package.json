@@ -10,8 +10,10 @@
     "astro": "astro",
     "prepare": "husky install",
     "format": "prettier --write . --plugin=prettier-plugin-astro",
-    "lint": "eslint . --fix",
-    "types:check": "astro check && tsc --noEmit --incremental false"
+    "format:check": "prettier src --check --plugin=prettier-plugin-astro",
+    "lint": "eslint --ext .ts,.tsx,.astro --max-warnings 0 src",
+    "types:check": "astro check && tsc --noEmit --incremental false",
+    "lint:pr": "pnpm types:check && pnpm lint && pnpm format:check"
   },
   "dependencies": {
     "@astrojs/react": "^3.0.2",
@@ -67,7 +69,7 @@
   },
   "lint-staged": {
     "*.{astro,js,ts,tsx}": [
-      "bash -c 'npm run types:check'",
+      "bash -c 'pnpm types:check'",
       "eslint --fix",
       "prettier -w --plugin=prettier-plugin-astro"
     ],
