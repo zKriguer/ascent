@@ -8,9 +8,6 @@ const CalButton = () => {
         size="md"
         color="secondary"
         className="group flex h-fit w-fit self-center"
-        onClick={async () => {
-          console.log("oi");
-        }}
       >
         <p className="w-full text-center">Agendar reunião</p>
       </Button>

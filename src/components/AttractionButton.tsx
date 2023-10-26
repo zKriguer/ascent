@@ -11,14 +11,7 @@ const AttractionButton = ({ isClient }: AttractionButtonProps) => {
       {isClient ? (
         <div className="relative flex w-full justify-center">
           <CalModal>
-            <Button
-              size="md"
-              color="primary"
-              className="group flex h-fit"
-              onClick={async () => {
-                console.log("oi");
-              }}
-            >
+            <Button size="md" color="primary" className="group flex h-fit">
               <p className="w-full text-center">Quero contratar</p>
             </Button>
           </CalModal>

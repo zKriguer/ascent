@@ -145,6 +145,9 @@ devDependencies:
   tailwindcss-animated:
     specifier: ^1.0.1
     version: 1.0.1(tailwindcss@3.3.3)
+  tailwindcss-animation-delay:
+    specifier: ^1.0.7
+    version: 1.0.7(tailwindcss@3.3.3)
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -6979,6 +6982,14 @@ packages:
     resolution: {integrity: sha512-u5wusj89ZwP8I+s8WZlaAd7aZTWBN/XEG6QgMKpkIKmAf3xP1A6WYf7oYIKmGaB10UAQaSqWopi/i1ozzZEs8Q==}
     peerDependencies:
       tailwindcss: '>=3.1.0'
+    dependencies:
+      tailwindcss: 3.3.3(ts-node@10.9.1)
+    dev: true
+
+  /tailwindcss-animation-delay@1.0.7(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-nJIQGJ7zePh7FiLFiZJOi7Vo+dRo+2Tqt8BRFa9yk8um0OFpuD7K3i8bZaNO3C8qMxdv0Y7YlHtCZq4/ydok9A==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0'
     dependencies:
       tailwindcss: 3.3.3(ts-node@10.9.1)
     dev: true

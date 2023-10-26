@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Ascent-Software",
+    "description": "Portfólio da Ascent Software para você agendar reuniões e falar sobre seu produto!",
+    "image": "/images/portfolioAscent.png",
+    "link": "https://ascentsoftware.com.br/",
+    "Contributors": [
+      {
+        "name": "Matheus",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109695949?v=4",
+        "github_url": "https://github.com/MatheusLukas"
+      },
+      {
+        "name": "Kriguer",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77925501?s=100&v=4",
+        "github_url": "https://github.com/zKriguer"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Fellipe Utaka",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      }
+    ]
+  },
+  {
+    "name": "Portfolio Kriguer",
+    "description": "Este é o portfólio do Kriguer, onde você pode ver seus projetos e entrar em contato com ele!",
+    "image": "/images/portfolioKriguer.png",
+    "link": "https://kriguer.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Kriguer",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77925501?s=100&v=4",
+        "github_url": "https://github.com/zKriguer"
+      }
+    ]
+  },
+  {
+    "name": "Portfolio Richard",
+    "description": "Este é o portfólio do Richard, onde você pode ver seus projetos e entrar em contato com ele!",
+    "image": "/images/portfolioRichard.png",
+    "link": "https://richard-lucas.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      }
+    ]
+  },
+  {
+    "name": "Useful Tools",
+    "description": "Neste site você encontra ferramentas úteis para o seu dia a dia!",
+    "image": "/images/useFullFellipe.png",
+    "link": "https://usefultools.vercel.app/",
+    "Contributors": [
+      {
+        "name": "Fellipe Utaka",
+        "avatar_url": "https://avatars.githubusercontent.com/u/68625746?s=100&v=4",
+        "github_url": "https://github.com/fellipeutaka"
+      }
+    ]
+  },
+  {
+    "name": "DanyShop",
+    "description": "Este é um site desenvolvido pela Ascent para você comprar suas roupas!",
+    "image": "/images/danyModas.png",
+    "link": "https://danymodas.vercel.app/vestidoss",
+    "Contributors": [
+      {
+        "name": "Kriguer",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77925501?s=100&v=4",
+        "github_url": "https://github.com/zKriguer"
+      },
+      {
+        "name": "Richas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83315499?s=100&v=4",
+        "github_url": "https://github.com/Kyori-kyo"
+      },
+      {
+        "name": "Matheus",
+        "avatar_url": "https://avatars.githubusercontent.com/u/109695949?v=4",
+        "github_url": "https://github.com/MatheusLukas"
+      }
+    ]
+  }
+]

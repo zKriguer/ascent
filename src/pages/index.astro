@@ -1,6 +1,9 @@
 ---
 import Layout from "@/src/layouts/Layout.astro";
 
+import { DynamicCards } from "@/src/components/DynamicCards/DynamicCards";
+import projects from "@/src/data/Projects.json";
+
 import AttractionButton from "../components/AttractionButton";
 ---
 
@@ -37,6 +40,12 @@ import AttractionButton from "../components/AttractionButton";
   <section
     class="flex h-full flex-col items-center justify-center gap-8 overflow-hidden lg:gap-12"
   >
-    <h1>Nova seção</h1>
+    <h1
+      style={{ fontFamily: "Roboto Mono Variable" }}
+      class="w-full px-2 text-center text-xl font-black md:w-1/2 lg:text-6xl"
+    >
+      Nossos Projetos
+    </h1>
+    <DynamicCards data={projects} client:load />
   </section>
 </Layout>
